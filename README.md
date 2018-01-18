@@ -1,2 +1,2 @@
 # DongFangHong-RPC
-simple rpc neety,zookeeper,spring
+simple rpc use neety,zookeeper,spring
