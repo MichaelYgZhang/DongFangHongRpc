@@ -6,7 +6,7 @@ simple rpc use neety,zookeeper,spring
 ```java
 1. cd /DongFangHongRpc 
 2. git init
-3. `.gitingore`
+3. .gitingore
 4. git add .
 5. git commit -m "init"
 6. github create new repository
