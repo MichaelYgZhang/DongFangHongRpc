@@ -15,3 +15,13 @@ simple rpc use neety,zookeeper,spring
 9. merge 
 10. git push origin master
 ```
+
+```js
+计划
+1. zookeeper register mode
+2. neety server client  say hello  mode
+3. spring mode integrate
+4. demo
+5. request, response, Serializable mode
+6. filter, log .... others
+```
