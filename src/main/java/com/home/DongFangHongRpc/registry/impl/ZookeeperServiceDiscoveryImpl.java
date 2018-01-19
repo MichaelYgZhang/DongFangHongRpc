@@ -6,7 +6,7 @@ import java.util.concurrent.ThreadLocalRandom;
 import org.I0Itec.zkclient.ZkClient;
 import org.apache.log4j.Logger;
 
-import com.home.DongFangHongRpc.common.constants.CollectionsUtil;
+import com.home.DongFangHongRpc.common.CollectionsUtil;
 import com.home.DongFangHongRpc.common.constants.ZookeeperGlobalConstants;
 import com.home.DongFangHongRpc.registry.IServiceDiscovery;
 

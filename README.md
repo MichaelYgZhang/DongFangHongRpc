@@ -18,11 +18,13 @@ simple rpc use neety,zookeeper,spring
 
 ```js
 计划
-1. zookeeper register mode
-2. neety server client  say hello  mode
+1. zookeeper register mode  finished
+2. neety server client  say hello  mode  TODO
 3. spring mode integrate
 4. 1th demo
 5. request, response, 
 6. Serializable, decode, encode
 7. load balance, filter, log .... others
 ```
+
+- 模仿参见[huangyong](https://gitee.com/huangyong/rpc), [dubbo](https://github.com/alibaba/dubbo)
