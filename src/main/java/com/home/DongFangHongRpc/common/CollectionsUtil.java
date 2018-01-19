@@ -1,6 +1,7 @@
-package com.home.DongFangHongRpc.common.constants;
+package com.home.DongFangHongRpc.common;
 
 import java.util.Collection;
+import java.util.Map;
 
 /**
  * @description
@@ -9,7 +10,12 @@ import java.util.Collection;
  * @datetime 2018年1月18日 下午6:19:55
  */
 public final class CollectionsUtil{
+	
 	public final static boolean isEmpty (final Collection<?> collection){
 		return null == collection || collection.isEmpty();
 	}
+	
+	public static boolean isEmpty(final Map<?,?> map) {
+        return map == null || map.isEmpty();
+    }
 }
