@@ -57,7 +57,7 @@ public class HelloServiceImpl2 implements HelloService {//略}
 - 历时3天模仿完成miniRPC-DongFangHongRPC，现在作出如下总结
 - 已完成功能点:Zookeeper提供服务注册与发现；Netty，SocketChannel完成通信；序列化基于Protostuff实现；Proxy.newProxyInstance(...); 动态代理模式调用Server；还有比如负载均衡采用随机，采用Builder模式构造请求对象等.目前阶段属于第一步阶段,能够完成基本的Client调用Server功能，调用依赖关系如下:
 
-- [dubbo](http://dubbo.io/books/dubbo-dev-book/sources/images/dubbo-relation.jpg)
+-  ![dubbo](http://dubbo.io/books/dubbo-dev-book/sources/images/dubbo-relation.jpg)
 
 - TODO 
 	- 增加文件配置,如果调用Zookeeper失败，则调用本地配置文件,比如超时配置,版本,IP,Port....
