@@ -1,5 +1,7 @@
 package com.home.DongFangHongRpc.bean;
 
+import java.util.Arrays;
+
 /**
  * RPC 请求
  * @description
@@ -8,6 +10,25 @@ package com.home.DongFangHongRpc.bean;
  * @datetime 2018年1月20日 上午8:17:41
  */
 public class RpcRequest {
+	/**
+	 * @param requestId
+	 * @param interfaceName
+	 * @param serviceVersion
+	 * @param methodName
+	 * @param parameterTypes
+	 * @param parameters
+	 */
+	private RpcRequest(String requestId, String interfaceName,
+			String serviceVersion, String methodName,
+			Class<?>[] parameterTypes, Object[] parameters) {
+		super();
+		this.requestId = requestId;
+		this.interfaceName = interfaceName;
+		this.serviceVersion = serviceVersion;
+		this.methodName = methodName;
+		this.parameterTypes = parameterTypes;
+		this.parameters = parameters;
+	}
 	private String requestId;
 	private String interfaceName;
 	private String serviceVersion;
@@ -21,22 +42,10 @@ public class RpcRequest {
 		return requestId;
 	}
 	/**
-	 * @param requestId the requestId to set
-	 */
-	public void setRequestId(String requestId) {
-		this.requestId = requestId;
-	}
-	/**
 	 * @return the interfaceName
 	 */
 	public String getInterfaceName() {
 		return interfaceName;
-	}
-	/**
-	 * @param interfaceName the interfaceName to set
-	 */
-	public void setInterfaceName(String interfaceName) {
-		this.interfaceName = interfaceName;
 	}
 	/**
 	 * @return the serviceVersion
@@ -45,22 +54,10 @@ public class RpcRequest {
 		return serviceVersion;
 	}
 	/**
-	 * @param serviceVersion the serviceVersion to set
-	 */
-	public void setServiceVersion(String serviceVersion) {
-		this.serviceVersion = serviceVersion;
-	}
-	/**
 	 * @return the methodName
 	 */
 	public String getMethodName() {
 		return methodName;
-	}
-	/**
-	 * @param methodName the methodName to set
-	 */
-	public void setMethodName(String methodName) {
-		this.methodName = methodName;
 	}
 	/**
 	 * @return the parameterTypes
@@ -69,22 +66,43 @@ public class RpcRequest {
 		return parameterTypes;
 	}
 	/**
-	 * @param parameterTypes the parameterTypes to set
-	 */
-	public void setParameterTypes(Class<?>[] parameterTypes) {
-		this.parameterTypes = parameterTypes;
-	}
-	/**
 	 * @return the parameters
 	 */
 	public Object[] getParameters() {
 		return parameters;
 	}
-	/**
-	 * @param parameters the parameters to set
-	 */
-	public void setParameters(Object[] parameters) {
-		this.parameters = parameters;
+	
+	@Override
+	public String toString() {
+		return "requestId["+this.requestId+"] "
+				+"interfaceName["+this.interfaceName+"] "
+				+"serviceVersion["+this.serviceVersion+"] "
+				+"methodName["+this.methodName+"] "
+				+"parameterTypes["+Arrays.toString(this.parameterTypes)+"] "
+				+"parameters["+Arrays.toString(this.parameters)+"].";
+				
 	}
 	
+	public static class RequestBuilder{
+		private final String requestId;
+		private final String interfaceName;
+		private final String methodName;
+		private String serviceVersion;
+		private Class<?>[] parameterTypes;
+		private Object[] parameters;
+		
+		public RequestBuilder(String requestId, String interfaceName, String methodName,
+				String serviceVersion, Class<?>[] parameterTypes, Object[] parameters) {
+			this.requestId = requestId;
+			this.interfaceName = interfaceName;
+			this.methodName = methodName;
+			this.serviceVersion = serviceVersion;
+			this.parameterTypes = parameterTypes;
+			this.parameters = parameters;
+		}
+		
+		public RpcRequest create(){
+			return new RpcRequest(requestId, interfaceName, serviceVersion, methodName, parameterTypes, parameters);
+		}
+	}
 }

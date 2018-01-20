@@ -16,8 +16,8 @@ public class ZookeeperServiceRegistryImpl implements IServiceRegistry{
 	private static final Logger LOG = Logger.getLogger(ZookeeperServiceRegistryImpl.class);
 	private final ZkClient zkClient;
 	
-	public ZookeeperServiceRegistryImpl(String zkServers){
-		zkClient = new ZkClient(zkServers, 
+	public ZookeeperServiceRegistryImpl(String zkAddress){
+		zkClient = new ZkClient(zkAddress, 
 				ZookeeperGlobalConstants.ZK_SESSION_TIMEOUT, 
 				ZookeeperGlobalConstants.ZK_CONNECTION_TIMEOUT);
 	}

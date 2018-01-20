@@ -1,5 +1,7 @@
 package com.home.DongFangHongRpc.bean;
 
+import com.alibaba.fastjson.JSONObject;
+
 /**
  * RPC 响应
  * @description
@@ -55,5 +57,12 @@ public class RpcResponse {
 	 */
 	public void setResult(Object result) {
 		this.result = result;
+	}
+	
+	@Override
+	public String toString() {
+		return "requestId["+this.requestId+"] "
+				+"exception["+JSONObject.toJSONString(this.exception)+"] "
+				+"result["+JSONObject.toJSONString(this.result)+"].";
 	}
 }

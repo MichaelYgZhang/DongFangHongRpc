@@ -27,7 +27,6 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-import io.netty.util.internal.StringUtil;
 
 /**
  * @description
@@ -96,7 +95,7 @@ public class RpcServer implements ApplicationContextAware, InitializingBean{
 			if (serviceRegistry != null) {
 				for (String interfaceName : handlerMap.keySet()) {
 					serviceRegistry.register(interfaceName, serviceAddress);
-					LOG.info("registry service:["+interfaceName+"-"+serviceAddress);
+					LOG.info("registry service:["+interfaceName+"-"+serviceAddress+"]");
 				}
 			}
 			//关闭RPC服务器
