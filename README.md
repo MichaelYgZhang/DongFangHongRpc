@@ -20,12 +20,13 @@ simple rpc use neety,zookeeper,spring
 ```js
 计划
 1. zookeeper register mode  finished
-2. neety server client  say hello  mode  TODO
+2. neety server client  say hello  mode
 3. spring mode integrate
 4. 1th demo
 5. request, response, 
 6. Serializable, decode, encode
 7. load balance, filter, log .... others
+8. TODO
 ```
 
 ```js
@@ -47,8 +48,23 @@ public class HelloServiceImpl2 implements HelloService {//略}
 3.分为以下几个步骤处理
  a. 重写InitializingBean.afterPropertiesSet();
  b. NIO(不推荐)/Netty(推荐) 做接收数据->解码->处理->编码->返回数据处理
- c. 注册服务到zookeeper
+ c. 注册服务到zookeeper 
 
+4. ✅
 ```
+
+##### 总结
+- 历时3天模仿完成miniRPC-DongFangHongRPC，现在作出如下总结
+- 已完成功能点:Zookeeper提供服务注册与发现；Netty，SocketChannel完成通信；序列化基于Protostuff实现；Proxy.newProxyInstance(...); 动态代理模式调用Server；还有比如负载均衡采用随机，采用Builder模式构造请求对象等.目前阶段属于第一步阶段,能够完成基本的Client调用Server功能，调用依赖关系如下:
+
+- [dubbo](http://dubbo.io/books/dubbo-dev-book/sources/images/dubbo-relation.jpg)
+
+- TODO 
+	- 增加文件配置,如果调用Zookeeper失败，则调用本地配置文件,比如超时配置,版本,IP,Port....
+	- 服务发现增加Cache,增加ZookeeperWatch机制
+	- 负载均衡增加其他比如Hash,轮询机制等
+	- Filter拦截过滤功能
+	- Socket传输安全问题
+	- 线程池子，序列化扩展，监控功能....
 
 - 模仿参见[huangyong](https://gitee.com/huangyong/rpc), [dubbo](https://github.com/alibaba/dubbo)

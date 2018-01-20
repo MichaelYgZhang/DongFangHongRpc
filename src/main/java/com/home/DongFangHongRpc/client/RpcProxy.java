@@ -11,7 +11,6 @@ import org.apache.log4j.Logger;
 import com.home.DongFangHongRpc.bean.RpcRequest;
 import com.home.DongFangHongRpc.bean.RpcResponse;
 import com.home.DongFangHongRpc.registry.IServiceDiscovery;
-import com.home.DongFangHongRpc.registry.impl.ZookeeperServiceDiscoveryImpl;
 
 /**
  * @description

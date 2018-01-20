@@ -23,6 +23,6 @@ public class HelloClient {
         Person person = new Person(9, "Michael");
         String result2 = helloService2.sayHello(person);
         System.out.println("client2 print:"+result2);
-        System.exit(0);
+        Thread.sleep(10*60*1000);
     }
 }

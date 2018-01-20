@@ -20,9 +20,10 @@ public class ZKGetData extends ZookeeperConnectionClient{
 
 	public static void main(String[] args) throws InterruptedException,
 			KeeperException {
-		String path = "/MyFirstZnode";
+		String path = "/DongFangHongRPC-Servers/serviceName";
 		final CountDownLatch connectedSignal = new CountDownLatch(1);
 		try {
+			connect();
 			Stat stat = znode_exists(path);
 			if (stat != null) {
 				byte[] b = zk.getData(path, new Watcher() {
