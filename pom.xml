@@ -58,12 +58,6 @@
 	    <version>5.0.2.RELEASE</version>
 	</dependency>
   	 
-  	<!-- zkclient -->
-    <dependency>
-	  	<groupId>com.101tec</groupId>
-	  	<artifactId>zkclient</artifactId>
-	  	<version>0.10</version>
-	</dependency>
     <!-- commons-lang -->  
   	<dependency>
 	  	<groupId>commons-lang</groupId>

@@ -61,7 +61,7 @@ public class HelloServiceImpl2 implements HelloService {//略}
 
 - TODO 
 	- 增加文件配置,如果调用Zookeeper失败，则调用本地配置文件,比如超时配置,版本,IP,Port....
-	- 服务发现增加Cache,增加ZookeeperWatch机制
+	- 服务发现增加Cache,增加ZookeeperWatch机制 完成✅
 	- 负载均衡增加其他比如Hash,轮询机制等
 	- Filter拦截过滤功能
 	- Socket传输安全问题
