@@ -75,5 +75,6 @@ public class HelloServiceImpl2 implements HelloService {//略}
 	- Filter拦截过滤功能
 	- Socket传输安全问题
 	- 线程池子，序列化扩展，监控功能....
+	- 引入连接池TODO
 
 - 模仿参见[huangyong](https://gitee.com/huangyong/rpc), [dubbo](https://github.com/alibaba/dubbo)
