@@ -17,6 +17,15 @@ simple rpc use neety,zookeeper,spring
 10. git push origin master
 ```
 
+- `.gitignore` 文件重新覆盖之前提交的文件
+
+```js
+git rm -r --cached .
+git add .
+git commit -m 'update .gitignore'
+```
+
+
 ```js
 计划
 1. zookeeper register mode  finished
