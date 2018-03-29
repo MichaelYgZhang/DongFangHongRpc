@@ -25,7 +25,7 @@ import com.home.DongFangHongRpc.registry.IServiceDiscovery;
  */
 public class ZookeeperServiceDiscoveryImpl extends ZookeeperConnection implements IServiceDiscovery{
 	private static final Logger LOG = Logger.getLogger(ZookeeperServiceDiscoveryImpl.class);
-    private final Map<String ,List<String>> servers = new ConcurrentHashMap<String, List<String>>();
+    private static Map<String ,List<String>> servers = new ConcurrentHashMap<String, List<String>>();
     private final ZooKeeper zk;
 	public ZookeeperServiceDiscoveryImpl(String zkAddress) {
 		zk = connectServer(zkAddress);
@@ -81,7 +81,7 @@ public class ZookeeperServiceDiscoveryImpl extends ZookeeperConnection implement
 				}
 				servers.put(serviceNamePath, tempAddress);
 			}
-			this.servers = servers;
+			ZookeeperServiceDiscoveryImpl.servers = servers;
 			LOG.info("servers:" + servers.toString());
 		} catch (KeeperException e) {
 			LOG.error(e.getMessage(), e);
