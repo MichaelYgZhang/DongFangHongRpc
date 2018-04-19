@@ -76,5 +76,5 @@ public class HelloServiceImpl2 implements HelloService {//略}
 	- Socket传输安全问题
 	- 线程池子，序列化扩展，监控功能....
 	- 引入连接池TODO
-
+	- 增加`lombok`
 - 模仿参见[huangyong](https://gitee.com/huangyong/rpc), [dubbo](https://github.com/alibaba/dubbo)
