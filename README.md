@@ -69,8 +69,8 @@ public class HelloServiceImpl2 implements HelloService {//略}
 -  ![dubbo](http://dubbo.apache.org/img/architecture.png)
 
 ####TODO 
-- [ ] AOP  
-	- [ ] LOG统一打印
+- [x] AOP  
+	- [x] LOG统一打印
  	- [ ] Prometheus监控
  	- [ ] 安全相关接口调用权限校验
  	- [ ] 性能优化？Cache？
