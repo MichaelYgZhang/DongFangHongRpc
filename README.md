@@ -72,10 +72,10 @@ public class HelloServiceImpl2 implements HelloService {//略}
 - [ ] AOP  
 	- [ ] LOG统一打印
  	- [ ] Prometheus监控
- - [ ] 安全相关接口调用权限校验
- - [ ] 性能优化？Cache？
- - [ ] 异常处理
- - [ ] 事务？
+ 	- [ ] 安全相关接口调用权限校验
+ 	- [ ] 性能优化？Cache？
+ 	- [ ] 异常处理
+ 	- [ ] 事务？
 - [ ] 增加文件配置,如果调用Zookeeper失败，则调用本地配置文件,比如超时配置,版本,IP,Port....
 - [x] 服务发现增加Cache,增加ZookeeperWatch机制 完成✅
 - [ ] 负载均衡增加其他比如Hash,轮询机制等
