@@ -10,7 +10,11 @@
   <name>DongFangHongRpc</name>
   <url>http://maven.apache.org</url>
 
+
   <properties>
+	<spring.version>5.0.2.RELEASE</spring.version>
+	<aspectj.version>1.7.4</aspectj.version>
+	<zookeeper.version>3.5.3-beta</zookeeper.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
  
@@ -55,7 +59,13 @@
 	<dependency>
 	    <groupId>org.springframework</groupId>
 	    <artifactId>spring-context</artifactId>
-	    <version>5.0.2.RELEASE</version>
+	    <version>${spring.version}</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-aop</artifactId>
+		<version>${spring.version}</version>
 	</dependency>
   	 
     <!-- commons-lang -->  
@@ -82,7 +92,7 @@
   	<dependency>
 	  	<groupId>org.apache.zookeeper</groupId>
 	  	<artifactId>zookeeper</artifactId>
-	  	<version>3.5.3-beta</version>
+	  	<version>${zookeeper.version}</version>
 	</dependency>
 	<!-- junit -->
     <dependency>
@@ -99,17 +109,17 @@
 	    <version>1.16.20</version>
 	    <scope>provided</scope>
 	</dependency>
+
+	<dependency>
+		<groupId>org.aspectj</groupId>
+		<artifactId>aspectjrt</artifactId>
+		<version>${aspectj.version}</version>
+	</dependency>
+
 	<dependency>
 		<groupId>org.aspectj</groupId>
 		<artifactId>aspectjtools</artifactId>
-		<version>1.7.4</version>
-	</dependency>
-	
-	<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
-	<dependency>
-	    <groupId>org.springframework</groupId>
-	    <artifactId>spring-web</artifactId>
-	    <version>5.0.5.RELEASE</version>
+		<version>${aspectj.version}</version>
 	</dependency>
 		
   </dependencies>
