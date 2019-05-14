@@ -63,15 +63,15 @@ public class HelloServiceImpl2 implements HelloService {//略}
 ```
 
 ##### 总结
-- 历时3天模仿完成miniRPC-DongFangHongRPC，现在作出如下总结
+- 历时几天模仿完成miniRPC-DongFangHongRPC，现在作出如下总结
 - 已完成功能点:Zookeeper提供服务注册与发现；Netty，SocketChannel完成通信；序列化基于Protostuff实现；Proxy.newProxyInstance(...); 动态代理模式调用Server；还有比如负载均衡采用随机，采用Builder模式构造请求对象等.目前阶段属于第一步阶段,能够完成基本的Client调用Server功能，调用依赖关系如下(类似Dubbo调用图):
 
 -  ![dubbo](http://dubbo.apache.org/img/architecture.png)
 
 ####TODO 
-- [ ]AOP  
- - [ ] LOG统一打印
- - [ ] Prometheus监控
+- [ ] AOP  
+	- [ ] LOG统一打印
+ 	- [ ] Prometheus监控
  - [ ] 安全相关接口调用权限校验
  - [ ] 性能优化？Cache？
  - [ ] 异常处理
