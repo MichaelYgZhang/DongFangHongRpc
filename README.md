@@ -68,7 +68,7 @@ public class HelloServiceImpl2 implements HelloService {//略}
 
 -  ![dubbo](http://dubbo.apache.org/img/architecture.png)
 
-####TODO 
+#### TODO 
 - [x] AOP  
 	- [x] LOG统一打印
  	- [ ] Prometheus监控
@@ -76,6 +76,7 @@ public class HelloServiceImpl2 implements HelloService {//略}
  	- [ ] 性能优化？Cache？
  	- [ ] 异常处理
  	- [ ] 事务？
+- [ ] 调用链追踪增加, 进行中!!
 - [ ] 增加文件配置,如果调用Zookeeper失败，则调用本地配置文件,比如超时配置,版本,IP,Port....
 - [x] 服务发现增加Cache,增加ZookeeperWatch机制 完成✅
 - [ ] 负载均衡增加其他比如Hash,轮询机制等
@@ -84,7 +85,7 @@ public class HelloServiceImpl2 implements HelloService {//略}
 - [ ] 线程池子，序列化扩展，监控功能....
 - [ ] 引入连接池TODO
 - [ ] 增加`lombok`
-- [ ] 调用链追踪
+
 	
 	
 	
