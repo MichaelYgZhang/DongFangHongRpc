@@ -24,7 +24,7 @@
 
 
   <properties>
-	<spring.version>5.0.2.RELEASE</spring.version>
+	<spring.version>5.2.22.RELEASE</spring.version>
 	<aspectj.version>1.7.4</aspectj.version>
 	<zookeeper.version>3.7.2</zookeeper.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
